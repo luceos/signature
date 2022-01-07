@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Builder;
 return [
     'up' => function (Builder $schema) {
         $schema->table('users', function (Blueprint $table) {
-            $table->text('signature');
+            $table->text('signature')->nullable();
         });
     },
     'down' => function (Builder $schema) {
